@@ -1,0 +1,19 @@
+[gammu]
+port            = /dev/uc15_at
+connection      = at
+[modem]
+power_en        = 111
+power_pin       = 115
+
+[monitor]
+monitor_sleep   = 10
+
+[send]
+send_sleep      = 10
+
+[receive]
+receive_sleep   = 10
+
+[ussd]
+
+[pppd]
