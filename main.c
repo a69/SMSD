@@ -1,6 +1,7 @@
 #include <gammu.h>
 #include <hiredis/hiredis.h>
 #include "monitor.h"
+#include "receive.h"
 
 GSM_StateMachine *s;
 INI_Section *cfg;
@@ -79,6 +80,7 @@ int main(int argc UNUSED, char **argv UNUSED)
     printf("Manufacturer  : %s\n", buffer);
 
     set_monitors(s,NULL);
+    receive_sms(s,NULL);
 
     /* Terminate connection */
     error = GSM_TerminateConnection(s);
