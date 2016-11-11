@@ -59,21 +59,6 @@ SMSD_Error set_monitors(GSM_StateMachine *stateMachine, redisContext *context) {
     smsd_error_handler(stateMachine, smsd_error, context);
 
 
-    gsm_error = GSM_GetGPRSAccessPoint(stateMachine, &accessPoint);
-    gsm_error_handler(stateMachine, gsm_error, context);
-
-    smsd_error = set_section_part_variable_int("Monitor","AccessPoint","Active", accessPoint.Active);
-    smsd_error_handler(stateMachine, smsd_error, context);
-
-    smsd_error = set_section_part_variable_int("Monitor","AccessPoint","Location", accessPoint.Location);
-    smsd_error_handler(stateMachine, smsd_error, context);
-
-    smsd_error = set_section_part_variable_string("Monitor", "AccessPoint", "Name", (char *) accessPoint.Name);
-    smsd_error_handler(stateMachine, smsd_error, context);
-
-    smsd_error = set_section_part_variable_string("Monitor", "AccessPoint", "URL", (char *) accessPoint.URL);
-    smsd_error_handler(stateMachine, smsd_error, context);
-
     gsm_error = GSM_GetIMEI(stateMachine ,IMEI);
     gsm_error_handler(stateMachine, gsm_error, context);
 
