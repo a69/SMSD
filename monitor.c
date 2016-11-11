@@ -46,7 +46,7 @@ SMSD_Error set_monitors(GSM_StateMachine *stateMachine, redisContext *context) {
     smsd_error = set_section_part_variable_string("Monitor","NetworkInfo","NetworkCode", networkInfo.NetworkCode);
     smsd_error_handler(stateMachine, smsd_error, context);
 
-    smsd_error = set_section_part_variable_string("Monitor", "NetworkInfo", "NetworkName", (char *) networkInfo.NetworkName);
+    smsd_error = set_section_part_variable_string("Monitor", "NetworkInfo", "NetworkName", DecodeUnicodeString(networkInfo.NetworkName) );
     smsd_error_handler(stateMachine, smsd_error, context);
 
     smsd_error = set_section_part_variable_string("Monitor","NetworkInfo","PacketCID", networkInfo.PacketCID);
@@ -57,7 +57,6 @@ SMSD_Error set_monitors(GSM_StateMachine *stateMachine, redisContext *context) {
 
     smsd_error = set_section_part_variable_string("Monitor", "NetworkInfo", "PacketLAC", (char *) get_networkinfo_state_string(networkInfo.State));
     smsd_error_handler(stateMachine, smsd_error, context);
-
 
     gsm_error = GSM_GetIMEI(stateMachine ,IMEI);
     gsm_error_handler(stateMachine, gsm_error, context);

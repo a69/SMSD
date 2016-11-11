@@ -8,6 +8,9 @@
 #include <gammu-statemachine.h>
 #include <hiredis/hiredis.h>
 #include <gammu-info.h>
+#include <wchar.h>
+#include <gammu-types.h>
+#include <gammu-config.h>
 #include "struct.h"
 #include "error.h"
 #include "database.h"
