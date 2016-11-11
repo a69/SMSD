@@ -17,7 +17,6 @@
       <sourceFolder url="file://$MODULE_DIR$/error.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/receive.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/database.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/cmake/FindHiredis.cmake" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ussd.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/info.h" isTestSource="false" />

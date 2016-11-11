@@ -1,6 +1,4 @@
 #include <gammu.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <hiredis/hiredis.h>
 #include "monitor.h"
 
@@ -12,7 +10,7 @@ char buffer[100];
 /* Function to handle errors */
 void error_handler(void)
 {
-    if (error != SMSD_ERR_NONE) {
+    if (error != ERR_NONE) {
         printf("ERROR: %s\n", GSM_ErrorString(error));
         if (GSM_IsConnected(s))
             GSM_TerminateConnection(s);
@@ -22,8 +20,6 @@ void error_handler(void)
 
 int main(int argc UNUSED, char **argv UNUSED)
 {
-    GSM_NetworkInfo info;
-    GSM_SignalQuality sig;
     GSM_Debug_Info *debug_info;
 
     /*
