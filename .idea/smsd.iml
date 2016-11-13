@@ -24,6 +24,8 @@
       <sourceFolder url="file://$MODULE_DIR$/info.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/pppd.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/send.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sms.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sms.c" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
