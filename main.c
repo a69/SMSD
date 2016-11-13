@@ -2,6 +2,7 @@
 #include <hiredis/hiredis.h>
 #include "monitor.h"
 #include "receive.h"
+#include "sms.h"
 
 GSM_StateMachine *s;
 INI_Section *cfg;
@@ -82,6 +83,7 @@ int main(int argc UNUSED, char **argv UNUSED)
     set_monitors(s,NULL);
     receive_sms(s,NULL);
 
+    is_exist_folder(s,"");
     /* Terminate connection */
     error = GSM_TerminateConnection(s);
     error_handler();
